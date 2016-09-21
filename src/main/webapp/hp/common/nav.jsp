@@ -20,7 +20,7 @@
       <center>
         <ul>
           <li>
-            <a href="list.jsp" />List</a>
+            <a href="list.jsp" />Menu</a>
           </li>
         </ul>
       </center>

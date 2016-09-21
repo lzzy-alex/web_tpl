@@ -12,19 +12,21 @@
 <html>
 
   <head>
+  
     <title>HP Style</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    
     <%@ include file="common/resource.jsp"%>
+      <script type="text/javascript">
+          $(document).ready(function(){
+            $(".jqzoom").imagezoom({preload:0});
+          });
+        </script>
+        
   </head>
-
+  
   <%@ include file="common/nav.jsp"%>
-
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $(".jqzoom").imagezoom({preload:0});
-    });
-  </script>
-
+  
   <!-- content start -->
   <div class="content">
 
@@ -90,7 +92,12 @@
         <input type="button" value="Del Batch" onclick="cm.del_batch('<%=del_batch_url%>','<%=ret_url%>')" class="btn" />
     </div>
 
-    Pager Html
+    <script type="text/javascript">
+      $.get("server/pager.jsp",function(pager){
+        $("#pager_div").html(pager);
+      });
+    </script>
+    <div id="pager_div"></div>
     
   </div>
   <!-- content end -->

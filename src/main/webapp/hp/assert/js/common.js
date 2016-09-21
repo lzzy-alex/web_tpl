@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	// form validation
+	// initial validate form
 	$(".edit_form").Validform({
 		tiptype : 2,
 		datatype:{
